@@ -7,9 +7,10 @@
 
 <div>
 <h2>pending</h2>
+ <!-- <img src="http://38.media.tumblr.com/05087768293dd7ff414c45e950896b54/tumblr_n7gp5hz1RU1tq9q5vo1_500.gif" -->
 	<form>
-		<input ng-model="query" placeholder="Search"/>
-		<button ng-click="getData()">Submit</button> 
+		<input ng-model="query" placeholder="Search" request='toggleButton()'/>
+		<button ng-hide='subBtn' class="btn btn-primary" dir-pending request="getData()">Submit</button> 
 	</form>
 </div>
 
@@ -19,10 +20,10 @@
 		<input ng-model="title" placeholder="title"/>
 		<input ng-model="body" placeholder="body"/>
 		<input ng-model="icon" placeholder="iconUrl"/>
-		<button ng-click="">Submit</button> 
+		<button new-dir title="title" body="body" icon="icon">Submit</button> 
 	</form>
 </div>
-
+{{data}}
 <scripts>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
